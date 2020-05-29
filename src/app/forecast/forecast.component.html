@@ -1,0 +1,17 @@
+<h1 class="city"></h1>
+<div class="card">
+  <div class="forecast" *ngFor="let dayWeather of forecast">
+    <div class="day" align=center>
+      <h2 class="date" align=center>{{dayWeather.date | date: 'MMMMd'}}</h2>
+      <img src="http://openweathermap.org/img/wn/{{dayWeather.img}}@2x.png" align=center>
+      <h2 class="description" align=center>{{dayWeather.description}}</h2>
+      <h3 class="tempM" align=center>{{dayWeather.temp}}&deg;</h3>
+    </div>
+  </div>
+</div>
+<form class="lookCity" [formGroup]="forecastForm" (ngSubmit)="onSubmit()" >
+  <p align=center>
+  <input type="text" class="cityName" formControlName="forecastCity" placeholder="Name of city">
+  <button class="btn" >go</button>
+</p>
+</form>

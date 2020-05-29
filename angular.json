@@ -119,6 +119,12 @@
           }
         }
       }
-    }},
-  "defaultProject": "weather-forecast"
+    }
+  },
+  "defaultProject": "weather-forecast",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "css"
+    }
+  }
 }
